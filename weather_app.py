@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 import requests
 
 def get_weather(city, api_key):
@@ -15,19 +14,32 @@ def get_weather(city, api_key):
         city_name = data['name']
         temperature = data['main']['temp']
         weather_description = data['weather'][0]['description']
-        return city_name, temperature, weather_description
+        humidity = data['main']['humidity']
+        return city_name, temperature, weather_description, humidity
     else:
         print("Error: Unable to fetch data.")
         return None
 
 def main():
-    api_key = "Your-Api-key"  # Replace with your API key
-    city = input("Enter the city name: ")
-    weather = get_weather(city, api_key)
+    api_key = "669cfa44525e719ca7249f527965476f"  # Replace with your API key
 
-    if weather:
-        city_name, temperature, description = weather
-        print(f"Weather in {city_name}: {temperature}°C, {description}")
+    # Allow user to enter multiple city names, separated by commas
+    cities = input("Enter city names (comma-separated): ").split(",")
+
+    # Strip spaces from each city name
+    cities = [city.strip() for city in cities]
+
+    for city in cities:
+        weather = get_weather(city, api_key)
+        if weather:
+            city_name, temperature, weather_description, humidity = weather
+            print("---------------------------")
+            print(f"Weather in {city_name}: ")
+            print(f"Temperature: {temperature}°C")
+            print(f"Description: {weather_description}")
+            print(f"Humidity: {humidity}%")
+            print("--------------------------")
+
 
 if __name__ == "__main__":
     main()

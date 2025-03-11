@@ -1,51 +1,52 @@
 # Weather-Forecast-Application
 
-Weather Forecast Application
-Description
+## Description
 A simple Python application that retrieves and displays current weather information for a specified city using the OpenWeatherMap API. It provides real-time weather updates and allows users to set reminders for weather checks.
 
-Features
-Fetches current weather data for any city.
-Displays temperature, humidity, and weather conditions.
-Allows users to set reminders for daily weather updates.
-Prerequisites
-Python 3.x
-An API key from OpenWeatherMap
-Installation
-Clone the repository:
+## Features
+- Fetches current weather data for any city.
+- Displays temperature, humidity, and weather conditions.
+- Allows users to set reminders for daily weather updates.
 
-bash
-Copy code
-git clone https://github.com/DanielAzeez/Weather-Forecast-Application.git
-Navigate to the project directory:
+## Prerequisites
+- Python 3.x
+- An API key from OpenWeatherMap
 
-bash
-Copy code
-cd Weather-Forecast-Application
-Create a virtual environment:
+## Installation
 
-bash
-Copy code
-python3 -m venv venv
-Activate the virtual environment:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DanielAzeez/Weather-Forecast-Application.git
+   ```
 
-bash
-Copy code
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install the required packages:
+2. Navigate to the project directory:
+   ```bash
+   cd Weather-Forecast-Application
+   ```
 
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Obtain your API key from OpenWeatherMap.
+3. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   ```
 
-Replace the placeholder in the code with your API key.
+4. Activate the virtual environment:
+   ```bash
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 
-Run the application:
+5. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-bash
-Copy code
-python weather_app.py
-Enter the city name when prompted to receive the current weather information.
+## Usage
+
+1. Obtain your API key from [OpenWeatherMap](https://openweathermap.org/api).
+2. Replace the placeholder in the code with your API key.
+3. Run the application:
+   ```bash
+   python weather_app.py
+   ```
+
+4. Enter the city name when prompted to receive the current weather information.
 
